@@ -1,6 +1,12 @@
 package com.example.randomdrawcard
 
+import jakarta.persistence.Embeddable
+import jakarta.persistence.EnumType
+import jakarta.persistence.Enumerated
+
+@Embeddable
 data class CardRandomDrawRangeByGrade(
+  @Enumerated(EnumType.STRING)
   val grade: CardGrade,  
   val startRange: Int,  
   val endRange: Int,  
